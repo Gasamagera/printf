@@ -4,7 +4,7 @@
 #include "main.h"
 
 /**
- * my_printf - Function that produces output according to a format
+ * _printf - Function that produces output according to a format
  *
  * @format: a character string
  * @...: variable arguments
@@ -52,5 +52,5 @@ int _printf(const char *format, ...)
 	}
 	va_end(args);
 
-	return counter;
+	return (counter);
 }
