@@ -93,9 +93,11 @@ int print_str(va_list args)
  */
 int print_mod(va_list args)
 {
+	char mod = '%';
+
 	(void)args;
 
-	write(1, "%", 1);
+	write(1, &mod, 1);
 	return (1);
 }
 
