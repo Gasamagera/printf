@@ -98,3 +98,4 @@ int print_mod(va_list args)
 	write(1, "%", 1);
 	return (1);
 }
+
