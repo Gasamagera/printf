@@ -101,3 +101,35 @@ int print_mod(va_list args)
 	return (1);
 }
 
+/**
+ * print_binary - Function that converts its unsigned int argument to
+ * binary and prints it
+ *
+ * @args: The unsigned int to be convert and printed
+ *
+ * Return: Number of printed characters
+ */
+int print_binary(va_list args)
+{
+	int i, counter = 0;
+	unsigned int x = va_arg(args, unsigned int);
+	char c;
+
+	for (i = 31; i >= 0; i--)
+	{
+		if ((x >> i) & 1)
+		{
+			c = '1';
+			write(1, &c, 1);
+			counter++;
+		}
+		else if (counter > 0)
+		{
+			c = '0';
+			write(1, &c, 1);
+			counter++;
+		}
+	}
+
+	return (counter);
+}

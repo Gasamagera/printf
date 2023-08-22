@@ -22,6 +22,7 @@ int _printf(const char *format, ...)
 		{'i', print_int},
 		{'d', print_int},
 		{'%', print_mod},
+		{'b', print_binary},
 		{'\0', NULL}
 	};
 
